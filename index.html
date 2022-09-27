@@ -2,122 +2,115 @@
 
 <head>
     <title>brebrebre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body class="flex-cent">
     <div class="card-ctnr">
         <h2 class="title">
             This is 🌙<span>R</span><span>e</span><span>e</span><span>e</span><span>o</span><span>n</span>🌙's
         </h2>
-        <div>
-            <h3>Online presence:</h3>
-            <ul>
-                <li>
-                    <a target="_blank" href="https://twitter.com/umbrecore"><button>Twitter</button></a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://ko-fi.com/umbrecore"><button>Ko-fi</button></a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://discord.com/invite/4YHjhcCUfk"><button>Discord server</button></a>
-                </li>
-            </ul>
+        <div class="tabs-ctnr flex-cent">
+            <button class="active" for="my-links" onclick="changeTab(this)">Links</button>
+            <button for="about-me" onclick="changeTab(this)">About me</button>
+            <button for="comm-info" onclick="changeTab(this)">Commission</button>
+            <button for="special" onclick="changeTab(this)">-w-</button>
         </div>
-        <div>
-            <h3>Projects:</h3>
-            <ul>
-                <li>
-                    <a target="_blank" href="https://stream.umbrecore.com/"><button>Capture card viewer</button></a>
-                </li>
-                <li>
-                    <a target="_blank"
-                        href="https://discord.com/api/oauth2/authorize?client_id=758176006171000833&permissions=338999499888&scope=applications.commands%20bot">
-                        <button>Discord bot</button></a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://vaporeon.umbrecore.com/"><button>Vaporeon</button></a>
-                </li>
-            </ul>
+        <div class="tab-view my-links">
+            <section>
+                <h3>Online places:</h3>
+                <div class="buttons-ctnr">
+                    <a target="_blank" href="https://twitter.com/umbrecore">
+                        <button><img src="https://twitter.com/favicon.ico"> Twitter</button>
+                    </a>
+                    <!-- <span>Where I post my art pieces</span> -->
+                    <a target="_blank" href="https://ko-fi.com/umbrecore">
+                        <button><img src="https://ko-fi.com/favicon.ico"> Ko-fi</button>
+                    </a>
+                    <a target="_blank" href="https://discord.com/invite/4YHjhcCUfk">
+                        <button>Discord server</button>
+                    </a>
+                </div>
+                <ul>
+                </ul>
+            </section>
+            <section>
+                <h3>Projects:</h3>
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://stream.umbrecore.com/"><button>Capture card viewer</button></a>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://discord.com/api/oauth2/authorize?client_id=758176006171000833&permissions=338999499888&scope=applications.commands%20bot">
+                            <button>Discord bot</button></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://vaporeon.umbrecore.com/"><button>Vaporeon</button></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="tab-view about-me hidden">
+            <p>
+                The name's Reeeon. I'm most known as the eevee artist on Twitter. Other than that I also game and
+                program stuff
+            </p>
+        </div>
+        <div class="tab-view special hidden">
+            <p>
+                Umbreon isn’t just a pokemon, it’s a cultural reset, it’s the oxygen you breathe, it’s a lifestyle, a
+                reason to live, an escape from this cruel world filled with thieves. it’s art, a hug from a loved one,
+                everything you’ve ever wanted.
+            </p>
         </div>
     </div>
 
-    <div class="assets-ctnr">
+    <div class="assets-ctnr flex-cent">
         <img class="he-walc" src="./assets/he_walk.gif">
-        <audio class="bg-music" controls autoplay>
+        <img class="he-walc" src="./assets/he_walk.gif">
+        <audio class="bg-music" controls autoplay loop>
             <source src="./assets/1-38 - Hotlantis.mp3" type="audio/mpeg">
         </audio>
     </div>
 </body>
-<style>
-    body {
-        background: url(./assets/bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        color: white;
-        font-family: 'Trebuchet MS', sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .card-ctnr {
-        background: rgba(133, 143, 152, 0.396);
-        backdrop-filter: blur(20px);
-        padding: 1px 80px;
-        margin: 20px;
-        border-radius: 2px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-        max-width: 500px;
-    }
-
-    .title span:nth-child(1):hover,
-    .title span:nth-child(2):hover {
-        color: #D00070;
-    }
-
-    .title span:nth-child(3):hover,
-    .title span:nth-child(4):hover {
-        color: #8C4799;
-    }
-
-    .title span:nth-child(5):hover,
-    .title span:nth-child(6):hover {
-        color: #0032A0;
-    }
-
-    .card-ctnr button {
-        transition: 0.5s;
-        width: 120px;
-        height: 40px;
-        border-radius: 10px;
-        border: 1px solid black;
-        margin: 5px 0;
-        background: white;
-        cursor: pointer;
-    }
-
-    .card-ctnr button:hover {
-        width: 400px;
-        height: 100px;
-        font-size: 32px;
-    }
-
-    .he-walc {
-        height: 300px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -9;
-    }
-
-    .bg-music {
-        width: 500px;
-        height: 40px;
-    }
-</style>
 <script>
+    const tabsCtnr = document.querySelector('.tabs-ctnr')
+    let changingTab = false
 
+    function changeTab(tab) {
+        if (changingTab) {
+            return
+        }
+        changingTab = true
+        tabs = Array.from(tabsCtnr.children)
+        tabs.forEach(el => {
+            el.classList.remove('active')
+        })
+        tab.classList.add('active')
+
+        views = Array.from(document.querySelectorAll('.tab-view'))
+        views.forEach(el => {
+            el.classList.remove('hidden')
+            el.classList.add('hiding')
+        })
+        setTimeout(() => {
+            views.forEach(el => {
+                clsLs = el.classList
+                if (clsLs.contains(tab.getAttribute('for'))) {
+                    clsLs.remove('hiding')
+                } else {
+                    clsLs.add('hiding')
+                    setTimeout(() => {
+                        el.classList.add('hidden')
+                        changingTab = false
+                    }, 400)
+                }
+            })
+        }, 0)
+    }
 </script>
 
 </html>
