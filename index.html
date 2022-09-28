@@ -9,13 +9,15 @@
 <body class="flex-cent">
     <div class="card-ctnr">
         <h2 class="title">
-            This is 🌙<span>R</span><span>e</span><span>e</span><span>e</span><span>o</span><span>n</span>🌙's
+            This is <span class="spacing"></span>
+            🌙<span
+                class="my-name"><span>R</span><span>e</span><span>e</span><span>e</span><span>o</span><span>n</span></span>🌙
         </h2>
         <div class="tabs-ctnr flex-cent">
             <button class="active" for="my-links" onclick="changeTab(this)">Links</button>
             <button for="about-me" onclick="changeTab(this)">About me</button>
             <button for="comm-info" onclick="changeTab(this)">Commission</button>
-            <button for="special" onclick="changeTab(this)">-w-</button>
+            <button for="special" onclick="changeTab(this)">...</button>
         </div>
         <div class="tab-view my-links">
             <section>
@@ -32,8 +34,7 @@
                         <button>Discord server</button>
                     </a>
                 </div>
-                <ul>
-                </ul>
+                <br>
             </section>
             <section>
                 <h3>Projects:</h3>
@@ -53,10 +54,15 @@
             </section>
         </div>
         <div class="tab-view about-me hidden">
+            <img class="me-2" src="./assets/suwun.png">
             <p>
                 The name's Reeeon. I'm most known as the eevee artist on Twitter. Other than that I also game and
-                program stuff
+                program stuff. <br><br>Favorite music artist: Snail's House. <br>Favorite "art" artist: Ivan Jhang.
+                <br><br><sub>Hover the mouse over my name.</sub>
             </p>
+        </div>
+        <div class="avatar-ctnr" onclick="changeTab(document.querySelector('button[for=\'about-me\']'))">
+            <img class="me-1" src="./assets/breee.png">
         </div>
         <div class="tab-view special hidden">
             <p>
@@ -64,6 +70,8 @@
                 reason to live, an escape from this cruel world filled with thieves. it’s art, a hug from a loved one,
                 everything you’ve ever wanted.
             </p>
+            <div class="quotation-mark">”</div>
+            <div class="quotation-mark">‟</div>
         </div>
     </div>
 
@@ -106,7 +114,7 @@
                     setTimeout(() => {
                         el.classList.add('hidden')
                         changingTab = false
-                    }, 400)
+                    }, 500)
                 }
             })
         }, 0)

@@ -15,21 +15,107 @@ p {
 }
 
 .tab-view {
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 .my-links {
-    height: 400px;
+    height: 390px;
 }
 
 .about-me {
-    height: 200px;
+    height: 550px;
     max-width: fit-content;
 }
 
+.about-me p {
+    position: relative;
+    top: 300px;
+}
+
+
+.me-1 {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: relative;
+    transition: 0.2s;
+}
+
+.avatar-ctnr {
+    border-radius: 0px;
+    overflow: hidden;
+    top: 140px;
+    left: 60px;
+    position: absolute;
+    border: 10px solid white;
+    transform: rotate(-10deg);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: 0.4s;
+    transition-delay: 0.2s;
+    height: 250px;
+    width: 185px;
+}
+
+.about-me.hiding+.avatar-ctnr .me-1,
+.about-me.hidden+.avatar-ctnr .me-1 {
+    width: 70px;
+    top: -10px;
+    left: -10px;
+    transition-delay: 0.5s;
+}
+
+.about-me.hiding+.avatar-ctnr,
+.about-me.hidden+.avatar-ctnr {
+    border-radius: 100px;
+    border: 2px solid rgb(255, 255, 255);
+    transform: unset;
+    box-shadow: none;
+    top: 18px;
+    left: 100px;
+    height: 45px;
+    width: 45px;
+}
+
+.spacing {
+    padding-left: 50px;
+}
+
+.about-me .me-2 {
+    top: 200px;
+    right: 60px;
+    position: absolute;
+    height: 200px;
+    border: 10px solid white;
+    transform: rotate(7deg);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.about-me .me-2:hover {
+    z-index: 2;
+}
+
 .special {
-    height: 100px;
+    height: 170px;
     max-width: fit-content;
+}
+
+.special p {
+    position: relative;
+    top: 20px;
+}
+
+.special .quotation-mark {
+    font-family: 'Times New Roman', serif;
+    font-size: 200px;
+    color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 80px;
+    z-index: -1;
+}
+
+.special .quotation-mark:nth-child(2) {
+    top: 160px;
+    right: 20px;
 }
 
 .hiding {
@@ -48,31 +134,37 @@ p {
 }
 
 .card-ctnr {
-    background: rgba(133, 143, 152, 0.396);
+    background: rgba(134, 145, 155, 0.413);
     backdrop-filter: blur(20px);
     padding: 1px 20px;
     margin: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     z-index: 2;
     min-width: 500px;
+    overflow: hidden;
 }
 
-.title span {
+.title {
+    margin: 30px 0;
+    white-space: nowrap;
+}
+
+.my-name {
     user-select: none;
 }
 
-.title span:nth-child(1):hover,
-.title span:nth-child(2):hover {
+.my-name span:nth-child(1):hover,
+.my-name span:nth-child(2):hover {
     color: #D00070;
 }
 
-.title span:nth-child(3):hover,
-.title span:nth-child(4):hover {
+.my-name span:nth-child(3):hover,
+.my-name span:nth-child(4):hover {
     color: #8C4799;
 }
 
-.title span:nth-child(5):hover,
-.title span:nth-child(6):hover {
+.my-name span:nth-child(5):hover,
+.my-name span:nth-child(6):hover {
     color: #0032A0;
 }
 
@@ -146,9 +238,10 @@ p {
     box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
 }
 
-@media only screen and (max-device-width: 640px) {
+@media only screen and (max-width: 999px) {
     .card-ctnr {
         min-width: unset;
+        max-width: 500px;
         width: 85vw;
     }
 
