@@ -7,6 +7,7 @@
 </head>
 
 <body class="flex-cent">
+    <div class="background"></div>
     <div class="card-ctnr">
         <h2 class="title">
             This is <span class="spacing"></span>
@@ -14,8 +15,8 @@
                 class="my-name"><span>R</span><span>e</span><span>e</span><span>e</span><span>o</span><span>n</span></span>🌙
         </h2>
         <div class="tabs-ctnr flex-cent">
-            <button class="active" for="my-links" onclick="changeTab(this)">Links</button>
-            <button for="about-me" onclick="changeTab(this)">About me</button>
+            <button class="active" for="my-links" onclick="changeTab(this)">About me</button>
+            <button for="about-me" onclick="changeTab(this)">More</button>
             <button for="comm-info" onclick="changeTab(this)">Commission</button>
             <button for="special" onclick="changeTab(this)">...</button>
         </div>
@@ -57,8 +58,11 @@
             <img class="me-2" src="./assets/suwun.png">
             <p>
                 The name's Reeeon. I'm most known as the eevee artist on Twitter. Other than that I also game and
-                program stuff. <br><br>Favorite music artist: Snail's House. <br>Favorite "art" artist: Ivan Jhang.
-                <br><br><sub>Hover the mouse over my name.</sub>
+                program stuff.<br><br>
+                Favorite music artist: Snail's House.<br>
+                Favorite (art) artist: Ivan Jhang.<br>
+                Switch friend code: SW-4329-3705-0798<br><br>
+                <sub>Hover the mouse over my name.</sub>
             </p>
         </div>
         <div class="avatar-ctnr" onclick="changeTab(document.querySelector('button[for=\'about-me\']'))">
@@ -81,9 +85,11 @@
         <audio class="bg-music" controls autoplay loop>
             <source src="./assets/1-38 - Hotlantis.mp3" type="audio/mpeg">
         </audio>
+        <img id="bre-run" src="/assets/brerun.gif">
     </div>
 </body>
 
+<script src="runBre.js"></script>
 <script>
     const tabsCtnr = document.querySelector('.tabs-ctnr')
     let changingTab = false
