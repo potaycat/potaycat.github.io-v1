@@ -179,6 +179,9 @@ p {
     display: none;
 }
 
+.my-links p {
+    font-style: italic;
+}
 
 .my-links button {
     transition: 0.5s;

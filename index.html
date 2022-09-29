@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -21,6 +22,9 @@
             <button for="special" onclick="changeTab(this)">...</button>
         </div>
         <div class="tab-view my-links">
+            <p>
+                Status: Day sleeping
+            </p><br>
             <section>
                 <h3>Online places:</h3>
                 <div class="buttons-ctnr">
@@ -85,11 +89,12 @@
         <audio class="bg-music" controls autoplay loop>
             <source src="./assets/1-38 - Hotlantis.mp3" type="audio/mpeg">
         </audio>
-        <img id="bre-run" src="/assets/brerun.gif">
+        <img id="bre-run" src="./assets/brerun.gif">
     </div>
 </body>
 
-<script src="runBre.js"></script>
+<script src="./runBre.js"></script>
+<script src="./track.js"></script>
 <script>
     const tabsCtnr = document.querySelector('.tabs-ctnr')
     let changingTab = false
