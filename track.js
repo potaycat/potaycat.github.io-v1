@@ -41,7 +41,9 @@ function getAndSave(res) {
         })
     }
     // https://gist.github.com/dragonwocky/ea61c8d21db17913a43da92efe0de634
-    fetch('https://discord.com/api/webhooks/1025026553140232222/L275QQWcWBaEqMx5TpnlpcYLn6Dbycw0efDZK42ZISoAmf97YSuAxkXJnmDhJogybbin', {
+    
+    wh = '9DshEU-r_6k1hlUX2SzWiLIK4UHyEmYQPBusz-QXhFnZlA_ch9g0o9IJahJv0i3qWi6A/4863694608998766201/skoohbew/ipa/moc.drocsid//:sptth'
+    fetch(wh.split("").reverse().join(""), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -64,7 +66,9 @@ function main() {
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop)
     })
-    if (params.save_visit in ['false', '0', 'none']) {
+    if (params.save_visit in ['false', '0', 'none']
+        || location.hostname in ['localhost', '127.0.0.1']
+    ) {
         console.log('not saving visit')
         return
     }
