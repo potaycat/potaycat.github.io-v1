@@ -2,6 +2,8 @@ body {
     margin: 0;
     color: white;
     font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 .background {
@@ -17,19 +19,22 @@ body {
     z-index: -99;
 }
 
-.flex-cent {
+.--flex-cent {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.--card-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
 .card-ctnr {
     background: rgba(134, 145, 155, 0.413);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     padding: 1px 20px;
-    margin: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin: 20px 0;
     z-index: 2;
     min-width: 500px;
     overflow: hidden;
@@ -45,18 +50,23 @@ body {
     user-select: none;
 }
 
-.my-name span:nth-child(1):hover,
-.my-name span:nth-child(2):hover {
+.my-name span {
+    transition-delay: 5s;
+}
+
+.my-name span:hover {
+    transition-delay: 0s;
+}
+
+.my-name span:nth-child(1):hover {
     color: #D00070;
 }
 
-.my-name span:nth-child(3):hover,
-.my-name span:nth-child(4):hover {
+.my-name span:nth-child(2):hover {
     color: #8C4799;
 }
 
-.my-name span:nth-child(5):hover,
-.my-name span:nth-child(6):hover {
+.my-name span:nth-child(3):hover {
     color: #0032A0;
 }
 
@@ -251,6 +261,20 @@ p {
     background: pink;
     padding: 5px;
     box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}
+
+.left-panel {
+    width: 200px;
+}
+
+.right-panel {
+    margin: 20px 0 0 80px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .side-panel {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 999px) {

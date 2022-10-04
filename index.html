@@ -7,89 +7,101 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="flex-cent">
+<body>
     <div class="background"></div>
-    <div class="card-ctnr">
-        <h2 class="title">
-            This is <span class="spacing"></span>
-            🌙<span
-                class="my-name"><span>R</span><span>e</span><span>e</span><span>e</span><span>o</span><span>n</span></span>🌙
-        </h2>
-        <div class="tabs-ctnr flex-cent">
-            <button class="active" for="my-links" onclick="changeTab(this)">About me</button>
-            <button for="about-me" onclick="changeTab(this)">More</button>
-            <button for="comm-info" onclick="changeTab(this)">Commission</button>
-            <button for="special" onclick="changeTab(this)">...</button>
+    <div class="side-panel left-panel"></div>
+    <div class="--flex-cent">
+        <div class="card-ctnr --card-shadow">
+            <h2 class="title">
+                This is <span class="spacing"></span>
+                🌙<span
+                    class="my-name"><span>Re</span><span>ee</span><span>on</span></span>🌙
+            </h2>
+            <div class="tabs-ctnr --flex-cent">
+                <button class="active" for="my-links" onclick="changeTab(this)">About me</button>
+                <button for="about-me" onclick="changeTab(this)">More</button>
+                <button for="comm-info" onclick="changeTab(this)">Commission</button>
+                <button for="special" onclick="changeTab(this)">...</button>
+            </div>
+            <div class="tab-view my-links">
+                <p>
+                    Status: Day sleeping
+                </p><br>
+                <section>
+                    <h3>Online places:</h3>
+                    <div class="buttons-ctnr">
+                        <a target="_blank" href="https://twitter.com/umbrecore">
+                            <button><img src="https://twitter.com/favicon.ico"> Twitter</button>
+                        </a>
+                        <!-- <span>Where I post my art pieces</span> -->
+                        <a target="_blank" href="https://ko-fi.com/umbrecore">
+                            <button><img src="https://ko-fi.com/favicon.ico"> Ko-fi</button>
+                        </a>
+                        <a target="_blank" href="https://discord.com/invite/4YHjhcCUfk">
+                            <button>Discord server</button>
+                        </a>
+                    </div>
+                    <br>
+                </section>
+                <section>
+                    <h3>Projects:</h3>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://stream.umbrecore.com/"><button>Capture card
+                                    viewer</button></a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://discord.com/api/oauth2/authorize?client_id=758176006171000833&permissions=338999499888&scope=applications.commands%20bot">
+                                <button>Discord bot</button></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://vaporeon.umbrecore.com/"><button>Vaporeon</button></a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="tab-view about-me hidden">
+                <img class="me-2" src="./assets/suwun.png">
+                <p>
+                    The name's Reeeon. I'm most known as the eevee artist on Twitter. Other than that I also game and
+                    program stuff.<br><br>
+                    Favorite music artist: Snail's House.<br>
+                    Favorite (art) artist: Ivan Jhang.<br>
+                    Switch friend code: SW-4329-3705-0798<br><br>
+                    <sub>Hover the mouse over my name.</sub>
+                </p>
+            </div>
+            <div class="avatar-ctnr" onclick="changeTab(document.querySelector('button[for=\'about-me\']'))">
+                <img class="me-1" src="./assets/breee.png">
+            </div>
+            <div class="tab-view special hidden">
+                <p>
+                    Umbreon isn’t just a pokemon, it’s a cultural reset, it’s the oxygen you breathe, it’s a lifestyle,
+                    a
+                    reason to live, an escape from this cruel world filled with thieves. it’s art, a hug from a loved
+                    one,
+                    everything you’ve ever wanted.
+                </p>
+                <div class="quotation-mark">”</div>
+                <div class="quotation-mark">‟</div>
+            </div>
         </div>
-        <div class="tab-view my-links">
-            <p>
-                Status: Day sleeping
-            </p><br>
-            <section>
-                <h3>Online places:</h3>
-                <div class="buttons-ctnr">
-                    <a target="_blank" href="https://twitter.com/umbrecore">
-                        <button><img src="https://twitter.com/favicon.ico"> Twitter</button>
-                    </a>
-                    <!-- <span>Where I post my art pieces</span> -->
-                    <a target="_blank" href="https://ko-fi.com/umbrecore">
-                        <button><img src="https://ko-fi.com/favicon.ico"> Ko-fi</button>
-                    </a>
-                    <a target="_blank" href="https://discord.com/invite/4YHjhcCUfk">
-                        <button>Discord server</button>
-                    </a>
-                </div>
-                <br>
-            </section>
-            <section>
-                <h3>Projects:</h3>
-                <ul>
-                    <li>
-                        <a target="_blank" href="https://stream.umbrecore.com/"><button>Capture card viewer</button></a>
-                    </li>
-                    <li>
-                        <a target="_blank"
-                            href="https://discord.com/api/oauth2/authorize?client_id=758176006171000833&permissions=338999499888&scope=applications.commands%20bot">
-                            <button>Discord bot</button></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://vaporeon.umbrecore.com/"><button>Vaporeon</button></a>
-                    </li>
-                </ul>
-            </section>
-        </div>
-        <div class="tab-view about-me hidden">
-            <img class="me-2" src="./assets/suwun.png">
-            <p>
-                The name's Reeeon. I'm most known as the eevee artist on Twitter. Other than that I also game and
-                program stuff.<br><br>
-                Favorite music artist: Snail's House.<br>
-                Favorite (art) artist: Ivan Jhang.<br>
-                Switch friend code: SW-4329-3705-0798<br><br>
-                <sub>Hover the mouse over my name.</sub>
-            </p>
-        </div>
-        <div class="avatar-ctnr" onclick="changeTab(document.querySelector('button[for=\'about-me\']'))">
-            <img class="me-1" src="./assets/breee.png">
-        </div>
-        <div class="tab-view special hidden">
-            <p>
-                Umbreon isn’t just a pokemon, it’s a cultural reset, it’s the oxygen you breathe, it’s a lifestyle, a
-                reason to live, an escape from this cruel world filled with thieves. it’s art, a hug from a loved one,
-                everything you’ve ever wanted.
-            </p>
-            <div class="quotation-mark">”</div>
-            <div class="quotation-mark">‟</div>
+
+        <div class="assets-ctnr --flex-cent">
+            <img class="he-walc" src="./assets/he_walk.gif">
+            <img class="he-walc" src="./assets/he_walk.gif">
+            <audio class="bg-music" controls autoplay loop>
+                <source src="./assets/1-38 - Hotlantis.mp3" type="audio/mpeg">
+            </audio>
+            <img id="bre-run" src="./assets/brerun.gif">
         </div>
     </div>
+    <div class="side-panel right-panel">
+        <iframe class="discord-embed --card-shadow" src="https://discord.com/widget?id=511986246629982256&theme=dark"
+            width="260" height="400" allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
-    <div class="assets-ctnr flex-cent">
-        <img class="he-walc" src="./assets/he_walk.gif">
-        <img class="he-walc" src="./assets/he_walk.gif">
-        <audio class="bg-music" controls autoplay loop>
-            <source src="./assets/1-38 - Hotlantis.mp3" type="audio/mpeg">
-        </audio>
-        <img id="bre-run" src="./assets/brerun.gif">
     </div>
 </body>
 
