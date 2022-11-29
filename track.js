@@ -1,6 +1,10 @@
-// https://app.abstractapi.com/api/ip-geolocation/tester
+const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop)
+})
+
 
 function httpGetAsync(url, callback) {
+    // https://app.abstractapi.com/api/ip-geolocation/tester
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function () {
         if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
@@ -16,19 +20,19 @@ function getAndSave(res) {
     // console.log(res)
     // console.log(navigator)
 
-    extracted = {
+    const extracted = {
         IP: res.ip_address,
         City: res.city,
-        'Using VPN': res.security.is_vpn,
+        Country: res.country,
         languages: navigator.languages,
         userAgent: navigator.userAgent,
-        // userAgentData: navigator.userAgentData,
-        doNotTrack: navigator.doNotTrack
+        ref: params.r,
+        site: 'v1'
     }
 
-    fields = []
+    const fields = []
     for (const key in extracted) {
-        val = extracted[key]
+        let val = extracted[key]
         if (val === undefined) {
             val = 'undefined'
         } else if (typeof val != 'string') {
@@ -41,8 +45,8 @@ function getAndSave(res) {
         })
     }
     // https://gist.github.com/dragonwocky/ea61c8d21db17913a43da92efe0de634
-    
-    wh = '9DshEU-r_6k1hlUX2SzWiLIK4UHyEmYQPBusz-QXhFnZlA_ch9g0o9IJahJv0i3qWi6A/4863694608998766201/skoohbew/ipa/moc.drocsid//:sptth'
+
+    const wh = '9DshEU-r_6k1hlUX2SzWiLIK4UHyEmYQPBusz-QXhFnZlA_ch9g0o9IJahJv0i3qWi6A/4863694608998766201/skoohbew/ipa/moc.drocsid//:sptth'
     fetch(wh.split("").reverse().join(""), {
         method: 'POST',
         headers: {
@@ -62,12 +66,9 @@ function getAndSave(res) {
 }
 
 
-function main() {
-    const params = new Proxy(new URLSearchParams(window.location.search), {
-        get: (searchParams, prop) => searchParams.get(prop)
-    })
+function track() {
     if (params.save_visit in ['false', '0', 'none']
-        || location.hostname in ['localhost', '127.0.0.1']
+        || ['localhost', '127.0.0.1'].includes(location.hostname)
     ) {
         console.log('not saving visit')
         return
@@ -77,4 +78,5 @@ function main() {
     httpGetAsync(url, getAndSave)
 }
 
-main()
+track()
+// export default { track }

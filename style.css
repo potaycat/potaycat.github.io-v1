@@ -31,8 +31,8 @@ body {
 
 .card-ctnr {
     background: rgba(134, 145, 155, 0.413);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 1px 20px;
     margin: 20px 0;
     z-index: 2;
@@ -80,7 +80,7 @@ p {
 }
 
 .my-links {
-    height: 390px;
+    height: 400px;
 }
 
 .about-me {
@@ -194,7 +194,7 @@ p {
 }
 
 .my-links button {
-    transition: 0.5s;
+    transition: 0.3s;
     width: 140px;
     height: 40px;
     border-radius: 10px;

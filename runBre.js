@@ -17,7 +17,7 @@ class FollowMouse {
         this.mouseX = 1000
         this.mouseY = 1000
         document.onmousemove = e => {
-            runningBre.setMousePos(e.clientX, e.clientY)
+            this.setMousePos(e.clientX, e.clientY)
         }
     }
 
